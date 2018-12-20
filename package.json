@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",
-    "csurf": "^1.9.0",
     "debug": "^4.1.0",
     "express": "^4.16.4",
     "helmet": "^3.15.0",

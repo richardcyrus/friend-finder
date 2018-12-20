@@ -1,6 +1,5 @@
 dependencies:
   cookie-parser: 1.4.3
-  csurf: 1.9.0
   debug: 4.1.0
   express: 4.16.4
   helmet: 3.15.0
@@ -267,27 +266,6 @@ packages:
       node: '>=4.8'
     resolution:
       integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
-  /csrf/3.0.6:
-    dependencies:
-      rndm: 1.2.0
-      tsscmp: 1.0.5
-      uid-safe: 2.1.4
-    dev: false
-    engines:
-      node: '>= 0.8'
-    resolution:
-      integrity: sha1-thEg3c7q/JHnbtUxO7XAsmZ7cQo=
-  /csurf/1.9.0:
-    dependencies:
-      cookie: 0.3.1
-      cookie-signature: 1.0.6
-      csrf: 3.0.6
-      http-errors: 1.5.1
-    dev: false
-    engines:
-      node: '>= 0.8.0'
-    resolution:
-      integrity: sha1-SdLGkl/87Ht95VlZfBU/pTM2QTM=
   /dasherize/2.0.0:
     dev: false
     resolution:
@@ -808,16 +786,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-zXhh/DqgrTXJ7erTN6Fh5k/xjMhDGXCqdYN3wvxUvGUQvnxcFfUd8E+6vLg/nk3ss1TYMb+DhRl25fYABioTvA==
-  /http-errors/1.5.1:
-    dependencies:
-      inherits: 2.0.3
-      setprototypeof: 1.0.2
-      statuses: 1.5.0
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-eIwNLB3iyBuebowBhDtrl+uSB1A=
   /http-errors/1.6.3:
     dependencies:
       depd: 1.1.2
@@ -1299,12 +1267,6 @@ packages:
       node: '>=0.6'
     resolution:
       integrity: sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
-  /random-bytes/1.0.0:
-    dev: false
-    engines:
-      node: '>= 0.8'
-    resolution:
-      integrity: sha1-T2ih3Arli9P7lYSMMDJNt11kNgs=
   /range-parser/1.2.0:
     dev: false
     engines:
@@ -1388,10 +1350,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lreewLK/BlghmxtfH36YYVg1i8IAce4TI7oao75I1g245+6BctqTVQiBP3YUJ9C6DQOXJmkYR9X9fCLtCOJc5w==
-  /rndm/1.2.0:
-    dev: false
-    resolution:
-      integrity: sha1-8z/pz7Urv9UgqhgyO8ZdsRCht2w=
   /run-async/2.3.0:
     dependencies:
       is-promise: 2.1.0
@@ -1451,10 +1409,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-p/tdJrO4U387R9oMjb1oj7qSMaMfmOyd4j9hOFoxZe2baQszgHcSWjuya/CiT5kgZZKRudHNOA0pYXOl8rQ5nw==
-  /setprototypeof/1.0.2:
-    dev: false
-    resolution:
-      integrity: sha1-gaVSFB7BBLiOic44MQOtXGZWTQg=
   /setprototypeof/1.1.0:
     dev: false
     resolution:
@@ -1601,12 +1555,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /tsscmp/1.0.5:
-    dev: false
-    engines:
-      node: '>=0.6.x'
-    resolution:
-      integrity: sha1-fcSjOvcVgatDN9qR2FylQn69mpc=
   /type-check/0.3.2:
     dependencies:
       prelude-ls: 1.1.2
@@ -1624,14 +1572,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
-  /uid-safe/2.1.4:
-    dependencies:
-      random-bytes: 1.0.0
-    dev: false
-    engines:
-      node: '>= 0.8'
-    resolution:
-      integrity: sha1-Otbzg2jG1MjHXsF2I/t5qh0HHYE=
   /unpipe/1.0.0:
     dev: false
     engines:
@@ -1695,7 +1635,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   cookie-parser: ^1.4.3
-  csurf: ^1.9.0
   debug: ^4.1.0
   eslint: ^5.10.0
   eslint-config-standard: ^12.0.0
