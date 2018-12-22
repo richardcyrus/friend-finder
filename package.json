@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "debug": "DEBUG=friend-finder:* npm start"
+    "debug": "DEBUG=friend-finder:* node server.js",
+    "watch": "DEBUG=friend-finder:* nodemon -e js -w app server.js"
   },
   "repository": {
     "type": "git",
