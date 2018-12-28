@@ -12,6 +12,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 
 const htmlRouter = require('./routes/static');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(
     },
 ));
 
+app.use('/api', apiRouter);
 app.use('/', htmlRouter);
 
 module.exports = app;
