@@ -1,12 +1,14 @@
 {
   "name": "friend-finder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A compatibility-based 'Friend Finder' application -- basically a dating app",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "debug": "DEBUG=friend-finder:* node server.js",
+    "lint": "prettier --single-quote --write '**/*.{js,json,scss}'",
+    "fix": "eslint --fix .",
     "watch": "DEBUG=friend-finder:* nodemon -e js -w app server.js"
   },
   "repository": {
@@ -21,21 +23,28 @@
   },
   "homepage": "https://github.com/richardcyrus/friend-finder#readme",
   "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.5",
-    "debug": "^4.1.1",
-    "express": "^4.17.1",
-    "helmet": "^3.23.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
     "morgan": "^1.10.0"
   },
   "engines": {
-    "node": "~12.18.2"
+    "node": "16"
+  },
+  "volta": {
+    "node": "16.19.0"
   }
 }
