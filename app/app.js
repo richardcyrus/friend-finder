@@ -5,31 +5,32 @@
  * (c) 2018 Richard Cyrus <richard.cyrus@rcyrus.com>
  */
 
-const path = require('path');
-const logger = require('morgan');
-const helmet = require('helmet');
-const cookieParser = require('cookie-parser');
-const express = require('express');
+const cookieParser = require('cookie-parser')
+const cors = require('cors')
+const express = require('express')
+const helmet = require('helmet')
+const logger = require('morgan')
+const path = require('path')
 
-const htmlRouter = require('./routes/static');
-const apiRouter = require('./routes/api');
+const htmlRouter = require('./routes/static')
+const apiRouter = require('./routes/api')
 
-const app = express();
+const app = express()
 
-app.use(helmet());
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(express.static(
-    path.join(__dirname, 'public'),
-    {
-        extensions: ['html'],
-        index: false
-    },
-));
+app.use(logger('dev'))
+app.use(helmet())
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser())
+app.use(
+  express.static(path.join(__dirname, 'public'), {
+    extensions: ['html'],
+    index: false,
+  })
+)
 
-app.use('/api', apiRouter);
-app.use('/', htmlRouter);
+app.use('/api', apiRouter)
+app.use('/', htmlRouter)
 
-module.exports = app;
+module.exports = app
