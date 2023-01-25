@@ -1,6 +1,6 @@
 {
   "name": "friend-finder",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A compatibility-based 'Friend Finder' application -- basically a dating app",
   "private": true,
   "scripts": {
