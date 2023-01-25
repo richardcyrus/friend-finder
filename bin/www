@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable */
 /* eslint operator-linebreak: ["error", "after", { "overrides": { "?": "before", ":": "before"} }] */
 /* eslint-enable */
@@ -12,7 +14,7 @@
 /**
  * Module dependencies.
  */
-const app = require('./app/app')
+const app = require('../app')
 const debug = require('debug')('friend-finder:server')
 const http = require('http')
 
@@ -76,10 +78,12 @@ function onError(error) {
   switch (error.code) {
     case 'EACCESS':
       console.error(`${bind} requires elevated privileges.`)
-      throw new Error(`${bind} requires elevated privileges.`)
+      process.exit(1)
+      break
     case 'EADDRINUSE':
       console.error(`${bind} is already in use.`)
-      throw new Error(`${bind} is already in use.`)
+      process.exit(1)
+      break
     default:
       throw error
   }

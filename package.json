@@ -5,11 +5,11 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "debug": "DEBUG=friend-finder:* node server.js",
+    "start": "node ./bin/www",
+    "debug": "DEBUG=friend-finder:* node  ./bin/www",
     "lint": "prettier --single-quote --write '**/*.{js,json,scss}'",
     "fix": "eslint --fix .",
-    "watch": "DEBUG=friend-finder:* nodemon -e js -w app server.js"
+    "watch": "DEBUG=friend-finder:* nodemon -e js -w app ./bin/www"
   },
   "repository": {
     "type": "git",
